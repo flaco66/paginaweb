@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <header class="inicio-header">
+        <h1>Mundo de las Motos</h1>
+    </header>
+    <section class="inicio-section">
+        <h2>Bienvenido al mundo de las motos</h2>
+        <p>Descubre información sobre diferentes tipos de motos y consejos para mantenimiento y seguridad.</p>
+        <p>También te proporcionamos noticias y novedades sobre el mundo de las motos. ¡Explora nuestro contenido y descubre todo lo relacionado con las dos ruedas!</p>
+        
+        <button class="boton" onclick="verMasMotos()">Ver Más</button>
+        
+        <h3>Tipos de Motos</h3>
+        <div class="tipo-moto">
+            <h4>Moto Deportiva</h4>
+            <p>Experimenta la velocidad y la adrenalina con nuestras motos deportivas de alto rendimiento.</p>
+            <img src="https://static.vecteezy.com/system/resources/previews/008/687/632/original/cool-blue-sportbike-free-vector.jpg" alt="Moto Deportiva" class="imagen-moto">
+            
+        </div>
+        <div class="tipo-moto">
+            <h4>Moto Cruiser</h4>
+            <p>Estilo clásico y comodidad en largos viajes, nuestras motos cruiser son ideales para los amantes de la carretera.</p>
+            <img src="https://th.bing.com/th/id/R.b0308c966929b6336affa94c93da7433?rik=7GEU01EYBKfq5w&pid=ImgRaw&r=0 alt="Moto Cruiser" class="imagen-moto">
+        
+        </div>
+        <div class="tipo-moto">
+            <h4>Moto de Aventura</h4>
+            <p>Explora caminos menos transitados y aventúrate en la naturaleza con nuestras motos de aventura todo terreno.</p>
+            <img src="https://s3.eu-west-1.amazonaws.com/cdn.motorbikemag.es/wp-content/uploads/2016/11/BMW-G-310-GS-2017-06-245x165.jpg" alt="Moto de Aventura" class="imagen-moto">
+            
+        </div>
+    </section>
+    
+    <script>
+        function verMasMotos() {
+            // Agrega más información sobre tipos de motos al hacer clic en el botón
+            const infoExtra = `
+                <div class="tipo-moto">
+                    <h4>Moto Naked</h4>
+                    <p>Las motos naked ofrecen un estilo minimalista y una experiencia de conducción pura y sin adornos.</p>
+                    <img src="https://lamoto.com.ar/wp-content/uploads/2022/09/Motos-Naked-mas-potentes-Ducati-Streetfighter-V4.jpg" alt="Moto Naked" class="imagen-moto">
+                    
+                </div>
+                <div class="tipo-moto">
+                    <h4>Moto Custom</h4>
+                    <p>Personaliza tu viaje con nuestras motos customizadas. Cada moto es única, al igual que tú.</p>
+                    <img src="https://www.motosan.es/wp-content/uploads/2019/01/6f84dec92d65b726a5ba5d52f83352ff.jpg" alt="Moto Custom" class="imagen-moto">
+                    
+                </div>
+            `;
+            document.querySelector('.inicio-section').insertAdjacentHTML('beforeend', infoExtra);
+        }
+    </script>
+</body>
+</html>
+
+

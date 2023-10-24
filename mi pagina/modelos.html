@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Modelos de Motos</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .modelos-header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .modelos-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        li img {
+            width: 150px; /* Tamaño de las imágenes */
+            height: auto; /* Para mantener la proporción */
+            margin-right: 20px; /* Espacio entre la imagen y el texto */
+        }
+    </style>
+</head>
+<body>
+    <header class="modelos-header">
+        <h1>Modelos de Motos</h1>
+    </header>
+    <section class="modelos-section" id="deportivas">
+        <h2>Deportivas</h2>
+        <ul>
+            <li>
+                <strong>Moto deportiva 1 - SuperSpeed 200:</strong> Velocidad máxima de 400 km/h, peso de 238 kg, precio desde $850,000.00
+                <img src="moto2.jpeg" alt="Moto Deportiva">
+            </li>
+            <li>
+                <strong>Moto deportiva 2 - Honda CBR1000RR-R / SP:</strong> Velocidad máxima de 299 km/h, peso de 201 kg, precio desde $595,000.00
+                <img src="moto 4.jpg" alt="Moto Deportiva">
+            </li>
+            <li>
+                <strong>Moto deportiva 3 - Yamaha YZF-R1M.:</strong> Velocidad máxima de 298 km/h, peso de 199 kg, precio desde $499,999.00
+                <img src="moto7.jpg" alt="Moto Deportiva">
+            </li>
+            <li>
+                <strong>Moto deportiva 4 - Ducati Superleggera V4:</strong> Velocidad máxima de 234 km/h, peso de 159 kg, precio desde $399,999.00
+                <img src="moto8.jpg" alt="Moto Deportiva">
+            </li>
+            <li>
+                <strong>Moto deportiva 5 - Norton V4 RR – SS:</strong> Velocidad máxima de 208 km/h, peso de 305 kg, precio desde $477,500.00
+                <img src="moto9.jpg" alt="Moto Deportiva">
+            </li>
+            
+        </ul>
+        <button id="mostrarCruiser">Ver Motos Cruiser</button>
+    </section>
+    <section class="modelos-section" id="cruiser" style="display: none;">
+        <h2>Cruiser</h2>
+        <ul>
+            <li>
+                <strong>Moto cruiser 1 - Classic Cruiser:</strong> Velocidad máxima de 150 km/h, peso de 250 kg, precio desde $12,000.
+                <img src="moto1.jpeg" alt="Moto Cruiser">
+            </li>
+            <li>
+                <strong>Moto cruiser 2 - Road King:</strong> Velocidad máxima de 140 km/h, peso de 260 kg, precio desde $13,000.
+                <img src="moto5.jpeg" alt="Moto Cruiser">
+            </li>
+            <li>
+                <strong>Moto cruiser 3 - Custom Chopper:</strong> Velocidad máxima de 160 km/h, peso de 280 kg, precio desde $14,500.
+                <img src="moto10.jpeg" alt="Moto Cruiser">
+            </li>
+            <li>
+                <strong>Moto cruiser 4 - Heritage Classic:</strong> Velocidad máxima de 145 km/h, peso de 255 kg, precio desde $12,800.
+                <img src="moto11.jpeg" alt="Moto Cruiser">
+            </li>
+            <li>
+                <strong>Moto cruiser 5 - Street Glide:</strong> Velocidad máxima de 155 km/h, peso de 270 kg, precio desde $13,700.
+                <img src="moto12.jpeg" alt="Moto Cruiser">
+            </li>
+            
+        </ul>
+        <button id="mostrarAventura">Ver Motos de Aventura</button>
+    </section>
+    <section class="modelos-section" id="aventura" style="display: none;">
+        <h2>Aventura</h2>
+        <ul>
+            <li>
+                <strong>Moto de aventura 1 - Explorer Adventure:</strong> Velocidad máxima de 180 km/h, peso de 200 kg, precio desde $11,000.00
+                <img src="moto3.jpeg" alt="Moto de Aventura">
+            </li>
+            <li>
+                <strong>Moto de aventura 2 - Trailblazer:</strong> Velocidad máxima de 170 km/h, peso de 190 kg, precio desde $10,500.
+                <img src="moto61.jpeg" alt="Moto de Aventura">
+            </li>
+            <li>
+                <strong>Moto de aventura 3 - Adventure Pro X:</strong> Velocidad máxima de 185 km/h, peso de 210 kg, precio desde $11,500.
+                <img src="moto13.jpeg" alt="Moto de Aventura">
+            </li>
+            <li>
+                <strong>Moto de aventura 4 - Enduro Master:</strong> Velocidad máxima de 175 km/h, peso de 195 kg, precio desde $10,900.
+                <img src="moto14.jpeg" alt="Moto de Aventura">
+            </li>
+            <li>
+                <strong>Moto de aventura 5 - Xtreme Explorer:</strong> Velocidad máxima de 190 km/h, peso de 220 kg, precio desde $12,200.
+                <img src="moto15.jpeg" alt="Moto de Aventura">
+            </li>
+          
+        </ul>
+        <button id="volverDeportivas">Ver Motos Deportivas</button>
+    </section>
+
+    <script>
+        document.getElementById("mostrarCruiser").addEventListener("click", function () {
+            document.getElementById("deportivas").style.display = "none";
+            document.getElementById("cruiser").style.display = "block";
+        });
+
+        document.getElementById("mostrarAventura").addEventListener("click", function () {
+            document.getElementById("cruiser").style.display = "none";
+            document.getElementById("aventura").style.display = "block";
+        });
+
+        document.getElementById("volverDeportivas").addEventListener("click", function () {
+            document.getElementById("aventura").style.display = "none";
+            document.getElementById("deportivas").style.display = "block";
+        });
+    </script>
+</body>
+</html>
+
+
+

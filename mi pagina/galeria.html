@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Galería de Motos</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <style>
+        .galeria-imagen {
+            text-align: center;
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px;
+            vertical-align: top;
+        }
+        .nombre-moto {
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .galeria-section {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="galeria-header">
+        <h1>Galería de Motos</h1>
+    </header>
+    <section class="galeria-section">
+        <p>Descubre nuestra impresionante galería de imágenes de motos. Aquí encontrarás fotos de motos clásicas, deportivas, personalizadas y más.</p>
+        <div class="galeria-imagen" onclick="mostrarNombre('Moto Clásica', 'moto1.jpeg', this)">
+            <img src="moto1.jpeg" alt="Moto Clásica" width="300">
+            <p class="nombre-moto">Kawasaki Ninja H2R</p>
+        </div>
+        <div class="galeria-imagen" onclick="mostrarNombre('Moto Deportiva', 'moto 4.jpg', this)">
+            <img src="moto 4.jpg" alt="Moto Deportiva" width="300">
+            <p class="nombre-moto">Honda CBR1000RR-R</p>
+        </div>
+        <div class="galeria-imagen" onclick="mostrarNombre('Moto Personalizada', 'moto33.jpeg', this)">
+            <img src="moto33.jpeg" alt="Moto Personalizada" width="300">
+            <p class="nombre-moto">Kawasaki z1000</p>
+        </div>
+        <div class="galeria-imagen" onclick="mostrarNombre('Moto Clásica', 'moto2.jpeg', this)">
+            <img src="moto2.jpeg" alt="Moto Clásica" width="300">
+            <p class="nombre-moto">SuperSpeed 200</p>
+        </div>
+        <div class="galeria-imagen" onclick="mostrarNombre('Moto Deportiva', 'moto7.jpg', this)">
+            <img src="moto7.jpg" alt="Moto Deportiva" width="300">
+            <p class="nombre-moto">Yamaha YZF-R1M</p>
+        </div>
+        <div class="galeria-imagen" onclick="mostrarNombre('Moto Personalizada', 'moto9.jpg', this)">
+            <img src="moto9.jpg" alt="Moto Personalizada" width="300">
+            <p class="nombre-moto">Norton V4 RR – SS</p>
+        </div>
+    </section>
+
+    <script>
+        function mostrarNombre(nombre, imagen, elemento) {
+            var nombreMoto = document.querySelectorAll('.nombre-moto');
+            nombreMoto.forEach(function (el) {
+                el.style.display = 'none'; // Oculta todos los nombres
+            });
+
+            var nombreElement = elemento.querySelector('.nombre-moto');
+            nombreElement.style.display = 'block'; // Muestra el nombre específico
+        }
+    </script>
+</body>
+</html>
+
+
+
+
